@@ -21,4 +21,11 @@ const transactionsData = [
   },
 ];
 
-export { transactionsData };
+const balance = [
+  {
+    balance: 0,
+    deposit: 0,
+    expense: 0,
+  }
+]
+export { transactionsData, balance };

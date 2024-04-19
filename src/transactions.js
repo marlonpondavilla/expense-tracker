@@ -1,4 +1,5 @@
 import { transactionsData } from "../data/data.js";
+import { fixDecimal } from "../utils/money.js";
 
 // transaction generation
 let transactionHTML = "";
@@ -24,7 +25,7 @@ if (transactionsData.length === 0) {
                 <p class="transaction-date">${transaction.transactionDate}</p>
             </li>
             <li class="transaction-amount" data-tr-type="${transaction.type}">
-                ${transactionSign + transaction.transactionAmount.toFixed(2)}
+                ${transactionSign + fixDecimal(transaction.transactionAmount)}
             </li>
         </div>
             `;
