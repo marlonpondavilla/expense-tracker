@@ -1,4 +1,5 @@
 
+let currentDate = new Date();
 
 function toggleBetweenBtns(btn1, btn2){
     if (btn1.classList.contains(`on`)) {
@@ -24,3 +25,17 @@ toggleExpense.addEventListener("click", () => {
 });
 
 
+function currentDateApp(){
+  let options = {
+    weekday: "short",
+    month: "2-digit",
+    day: "2-digit",
+    year: "numeric",
+  };
+  let formattedDate = currentDate.toLocaleDateString("en-US", options);
+
+  document.querySelector('.current-date-app').innerHTML = formattedDate;
+}
+currentDateApp();
+
+export { currentDate };
