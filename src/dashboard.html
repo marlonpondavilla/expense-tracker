@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="queries.css">
+    <title>WiseSpend</title>
+</head>
+<body>
+    <section>
+        <h1 class="title">Expense Tracker</h1>
+        <article>
+            <div class="main-dashboard">
+                <div class="group-1">
+                    <h2>Total Balance</h2>
+                    <p class="balance">P4,459.00</p>
+                </div>
+                <!-- MAIN BOTTOM -->
+                <div class="sub-main">
+                    <div class="deposit-group">
+                        <p class="deposit-title">Deposit</p>
+                        <p class="deposit-amount">+P510.00</p>
+                    </div>
+                    <div class="expense-group">
+                        <p class="expense-title">Expense</p>
+                        <p class="expense-amount">-P750.00</p>
+                    </div>
+                </div>
+            </div>
+            <!-- TRANSACTIONS -->
+            <div class="transaction-container">
+                <h3>Transactions</h3>
+                <div class="transaction-content">
+                    <div class="transaction">
+                        <li class="transaction-group">
+                            <p class="transaction-title">Pambili yelo</p>
+                            <p class="transaction-date">03/12/2024</p>
+                        </li>
+                        <li class="transaction-amount expense">
+                            -P50.00
+                        </li>
+                    </div>
+
+                    <div class="transaction">
+                        <li class="transaction-group">
+                            <p class="transaction-title">Kupit sa nanay</p>
+                            <p class="transaction-date">12/01/2024</p>
+                        </li>
+                        
+                        <li class="transaction-amount deposit">
+                            +P500.00
+                        </li>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADD TRANSACTION -->
+            <div class="add-transaction-container">
+                <h4>Add Transaction</h4>
+                <div class="toggle-transaction">
+                    <p class="toggle-deposit on">DEPOSIT</p>
+                    <p class="toggle-expense">EXPENSE</p>
+                </div>
+                <div class="transaction-input-container">
+                    <h5>Description:</h5>
+                    <input class="input-1" type="text">
+
+                    <div class="transaction-input-group">
+                        <div class="group-1">
+                            <h5>Amount:</h5>
+                            <input class="input-2" type="number" placeholder="P">
+                        </div>
+
+                        <div class="group-2">
+                            <h5>Date: </h5>
+                            <p>Sun, 03/23/2004</p>
+                        </div>
+                    </div>
+                    <button>SUBMIT</button>
+                </div>
+            </div>
+            
+        </article>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
