@@ -15,13 +15,17 @@ function toggleBetweenBtns(btn1, btn2){
 
 const toggleDeposit = document.querySelector(`.toggle-deposit`);
 const toggleExpense = document.querySelector(`.toggle-expense`);
+const note = document.querySelector(".note");
 
 toggleDeposit.addEventListener("click", () => {
   toggleBetweenBtns(toggleDeposit,toggleExpense);
+  note.innerHTML = "*Note: you are in the deposit mode";
 });
 
 toggleExpense.addEventListener("click", () => {
   toggleBetweenBtns(toggleExpense,toggleDeposit);
+  
+  note.innerHTML = "*Note: you are in the expense mode";
 });
 
 

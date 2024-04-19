@@ -1,6 +1,6 @@
 import { transactionsData } from "../data/data.js";
-// transaction generation
 
+// transaction generation
 let transactionHTML = "";
 
 if (transactionsData.length === 0) {
