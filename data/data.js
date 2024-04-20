@@ -1,6 +1,7 @@
 import { currentDate } from "../src/script.js";
+import { saveToStorage } from "../utils/money.js";
 
-const transactionsData = [
+export const transactionsData = [
   {
     transactionTitle: "Load",
     transactionDate: currentDate.toLocaleString("en-US", { hour12: true }),
@@ -21,11 +22,25 @@ const transactionsData = [
   },
 ];
 
-const balance = [
-  {
-    balance: 0,
-    deposit: 0,
-    expense: 0,
+export const balance = {
+  totalBalance: 0,
+  totalDeposit: 0,
+  totalExpense: 0,
+};
+
+const moneyInputHTML = document.querySelector(".input-2");
+const submitBtn = document.querySelector(".submit-btn");
+
+submitBtn.addEventListener("click", () => {
+  const moneyInputHTMLValue = parseFloat(moneyInputHTML.value);
+  balance.totalBalance += moneyInputHTMLValue;
+
+  if(isNaN(moneyInputHTMLValue) || moneyInputHTMLValue < 1){
+    alert("Please check denomination")
+    return false;
   }
-]
-export { transactionsData, balance };
+  else{
+    saveToStorage("balance",  balance);
+  }
+});
+
